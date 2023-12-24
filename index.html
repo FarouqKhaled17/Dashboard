@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/fui.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/375cfc3d13.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-relative p-20">
+        <h3 class="p-relative txt-c mt-0">Black Mart</h3>
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-circle-user fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-solid fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content w-full">
+        <div class="head dflex-between bg-white">
+          <div class="search p-relative">
+            <input type="text" placeholder="Search" class="p-10" />
+          </div>
+          <div class="icon d-flex align-center">
+            <span class="notify p-relative">
+              <i class="bell fa-regular fa-bell fa-lg"></i>
+            </span>
+            <div class="profile_pic p-relative">
+              <img src="/imgs/profile-pic (4).png" alt="account img" />
+            </div>
+          </div>
+        </div>
+        <h1 class="p-relative">Dashboard</h1>
+        <div class="wrapper d-grid gap-20">
+          <!--! Welcome Widget -->
+          <div
+            class="welcome bg-white rad-20 text-c-mobile d-block-mobile over-hidden"
+          >
+            <div class="intro bg-eee d-flex dflex-between p-20">
+              <div>
+                <h2 class="text-cp">welcome</h2>
+                <p class="">Farouk</p>
+              </div>
+              <img src="/imgs/welcome.png" alt="welcome wideget" />
+            </div>
+            <img
+              src="/imgs/profile-pic (4).png"
+              alt="profile photo"
+              class="profile"
+            />
+            <div class="body d-flex p-20 text-c mt-10 mb-20 dflex-between">
+              <div>
+                Farouk Khaled
+                <span class="d-block c-grey fs-14 mt-15"
+                  >Back-End Developer</span
+                >
+              </div>
+              <div>
+                Projects <span class="d-block c-grey fs-14 mt-15">69</span>
+              </div>
+              <div class="ml-20">
+                Earned <span class="d-block c-grey fs-14 mt-15">69000$</span>
+              </div>
+            </div>
+            <a
+              href="profile.html"
+              class="fs-14 d-block rad-6 bg-blue visit c-white"
+              >Profile</a
+            >
+          </div>
+          <!--? Quick Draft Widget -->
+          <div class="quick-draft bg-widget over-hidden rad-20">
+            <h2 class="">Quick Draft</h2>
+            <p class="c-grey">Write A Draft For Your Ideas</p>
+            <form>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Feel Free...!"
+                class="d-block b-none bg-eee p-10 rad-20"
+              />
+              <textarea
+                name="note"
+                id="note"
+                placeholder="Title"
+                class="d-block b-none bg-eee mt-20 rad-15"
+              ></textarea>
+              <input
+                type="submit"
+                name="save"
+                id="save"
+                class="save d-block btn-shape btn-shape:hover"
+              />
+            </form>
+          </div>
+          <!--* Start Yearly Targets -->
+          <div class="target bg-white over-hidden rad-20 p-20 ">
+            <h2 class="mt-10">Year Targets</h2>
+            <p class="text-cp c-grey">targets of the year</p>
+            <div class="target-row d-flex mb-20 blue">
+                <div class="icon rad-20">
+                    <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+                </div>
+                <div class="details ml-20">
+                    <span class="c-grey d-block mb-10">Money</span>   
+                    <span class="f-bold">$20.000</span>   
+                    <div class="progress p-relative">
+                        <span class="bg-blue" style="width: 40%">                   
+                        <span class="bg-blue"> 40%</span> 
+                        </span>                   
+                    </div>
+                </div>
+            </div>
+
+            <div class="target-row d-flex mb-20 orange">
+                <div class="icon rad-20">
+                    <i class="fa-solid fa-code fa-lg c-orange"></i>
+                </div>
+                <div class="details ml-20">
+                    <span class="c-grey d-block mb-10">Code</span>   
+                    <span class="f-bold">$50.000</span>   
+                    <div class="progress p-relative">
+                        <span class="bg-orange" style="width: 52%">                   
+                        <span class="bg-orange"> 52%</span> 
+                        </span>                   
+                    </div>
+                </div>
+            </div>  
+
+            <div class="target-row d-flex green">
+                <div class="icon rad-20">
+                    <i class="fa-solid fa-user fa-lg c-green"></i>
+                </div>
+                <div class="details ml-20">
+                    <span class="c-grey d-block mb-10">Projects</span>   
+                    <span class="f-bold">$80.000</span>   
+                    <div class="progress p-relative">
+                        <span class="bg-green" style="width: 68%">                   
+                        <span class="bg-green"> 68%</span> 
+                        </span>                   
+                    </div>
+                </div>
+            </div>
+          <!--* End Yearly Targets -->
+        </div>
+        <!--! Start Tickets -->
+        <div class="ticket bg-white p-20 over-hidden rad-15 ">
+            <h2 class="text-cp">tickets statistics</h2>
+            <p class="c-grey text-cp">everything about support tickets</p>
+            <div class="wrapper d-flex d-flex-wrap p-20 rad-15">
+                <div class="box">
+                    <i class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+                    <h2>2500</h2>
+                    <p class="c-grey text-cp">total</p>
+                </div>
+                <div class="box2">
+                    <i class="fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
+                    <h2>500</h2>
+                    <p class="c-grey text-cp">pending</p>
+                </div>
+                <div class="box3">
+                    <i class="fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
+                    <h2>2000</h2>
+                    <p class="c-grey text-cp">closed</p>
+                </div>
+                <div class="box4">
+                    <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
+                    <h2>250</h2>
+                    <p class="c-grey text-cp">deleted</p>
+                </div>
+            </div>
+        </div>
+        <!--! End Tickets -->
+    </div>
+    </div>
+  </body>
+</html>

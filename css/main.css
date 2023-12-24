@@ -1,0 +1,621 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --dark-blue-color: #0a3d62;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --content-color: #f6f6f6;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*! Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue-color);
+  border-radius: 30px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black-color);
+}
+/*! End Scroll bar */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  min-height: 400vh;
+  background-color: rgb(255, 255, 255);
+}
+
+/*! Start Sidebar */
+.sidebar {
+  width: 230px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.sidebar > h3 {
+  margin: 0;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.sidebar ul li a:active,
+.sidebar ul li a:hover {
+  background-color: #f6f6f6;
+}
+
+.sidebar ul li {
+  margin-top: 5px;
+}
+.sidebar ul li a span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sidebar ul li a {
+  transition: 0.3s;
+}
+
+.sidebar ul li a i {
+  margin-right: 8px;
+}
+
+.sidebar > h3::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: #000;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-54%);
+}
+
+.sidebar > h3::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  bottom: 1px;
+  left: 33%;
+  transform: translate(50%);
+  border-radius: 50%;
+  border: #ffffff 4px solid;
+  transition: 0.3s;
+}
+.sidebar > h3:hover::after {
+  background-color: #ffffff;
+  border: #10a413 4px solid;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 58px;
+    padding: 10px;
+  }
+  .sidebar ul li a span {
+    display: none;
+  }
+  .sidebar > h3::before {
+    display: none;
+  }
+  .sidebar > h3::after {
+    display: none;
+  }
+  .sidebar > h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+}
+/*! End Sidebar */
+
+/*? Start Head */
+.content {
+  overflow: hidden;
+  background-color: var(--content-color);
+}
+.head {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+.head .search::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--grey-color);
+  transition: all 0.3s ease-in-out;
+}
+.head .search:hover::before {
+  color: var(--blue-alt-color);
+}
+
+.head .search input {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding-left: 21px;
+  margin-left: 12px;
+  width: 130px;
+  border: 1px solid var(--grey-color);
+  box-shadow: 0 0 1px var(--blue-alt-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.head .search input:focus {
+  border: 1px solid var(--blue-alt-color);
+  box-shadow: 0 0 6px var(--blue-alt-color);
+  width: 180px;
+}
+
+.head .search input::placeholder {
+  color: var(--grey-color);
+  transition: all 0.2s ease-in-out;
+}
+.head .search input:focus::placeholder {
+  opacity: 0;
+}
+
+.head .icon .profile_pic img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 20px;
+  border: var(--blue-alt-color) 2px solid;
+  border-radius: 50%;
+  transition: border 0.2s ease-in-out;
+}
+
+.head .icon .profile_pic img:hover {
+  border: var(--blue-alt-color) 4px solid;
+  border-radius: 50%;
+}
+
+/* TODO doesn't work wanna be solved later */
+/* 
+.head .icon .profile_pic img::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+} */
+
+.head .icon .notify {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.head .icon .notify::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.head .icon .notify::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--green-color);
+  position: absolute;
+  left: 385%;
+  bottom: -40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.head .icon .bell:hover {
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .head .search input::placeholder {
+    opacity: 0;
+  }
+
+  .head .search input {
+    width: 50px;
+    margin-left: 8px;
+  }
+  .head .search input:focus {
+    width: 100px;
+  }
+}
+.page h1 {
+  margin: 20px 20px 40px 30px;
+}
+.page h1::before,
+.page h1::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+}
+.page h1::before {
+  background-color: #ffffff;
+  width: 190px;
+}
+.page h1::after {
+  background-color: var(--dark-blue-color);
+}
+/*? End Head */
+
+/** Start Wrapper */
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-inline: 20px;
+  padding-block: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-inline: 10px;
+    padding-block: 10px;
+  }
+}
+/** End Wrapper */
+
+/*! Start Welcome Widget */
+.intro h2 {
+  font-size: 32px;
+  margin-top: -40px;
+}
+.intro p {
+  font-size: 20px;
+  margin-top: -25px;
+  color: var(--blue-color);
+  text-align: left;
+  margin-left: 10px;
+}
+.intro img {
+  width: 200px;
+}
+.welcome .visit {
+  margin: 30px 20px;
+  font-size: 16px;
+  padding: 5px;
+  width: 60px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.welcome .visit:hover {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+
+.welcome .profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: -450px;
+  margin-top: -20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 3px #0d21d8, 0 0 0 5px #e00606;
+}
+.welcome .profile:hover {
+  box-shadow: 0 0 0 3px #e00608, 0 0 0 5px #0d21d9;
+}
+@media screen and (max-width: 767px) {
+  .intro img {
+    opacity: 0;
+  }
+  .intro h2 {
+    text-align: center;
+  }
+  .welcome .profile {
+    margin-left: 0;
+    margin-top: -20px;
+  }
+  .body {
+    display: block;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .body span {
+    margin-top: -2px;
+    margin-bottom: 10px;
+  }
+  .body :nth-child(3) {
+    margin-left: 2px;
+  }
+}
+/*! End Welcome Widget */
+
+/*? Start Quick Draft */
+.quick-draft {
+  padding-left: 20px;
+}
+.quick-draft form input {
+  width: 200px;
+}
+.quick-draft form textarea {
+  width: 400px;
+  height: 150px;
+  resize: none;
+}
+.quick-draft form textarea,
+.quick-draft form input {
+  border: 0px solid var(--grey-color);
+  box-shadow: 0 0 1px var(--blue-alt-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.quick-draft form textarea:focus,
+.quick-draft form input:focus {
+  border: 1px solid var(--blue-alt-color);
+  box-shadow: 0 0 6px var(--blue-alt-color);
+}
+
+.quick-draft form textarea::placeholder,
+.quick-draft form input::placeholder {
+  transition: all 0.1s ease-in-out;
+}
+
+.quick-draft form textarea:focus::placeholder,
+.quick-draft form input:focus::placeholder {
+  opacity: 0;
+}
+/*? End Quick Draft */
+
+/** Start Targets */
+.target p {
+  margin-top: -10px;
+}
+.target .target-row .icon {
+  background-color: #0077ff69;
+  padding: 40px;
+}
+.target .orange .icon {
+  background-color: #f59e0b69;
+}
+.target .green .icon {
+  background-color: #22c55e69;
+}
+.target .target-row .details {
+  margin-top: 10px;
+  flex: 1;
+}
+
+.target .target-row .details .progress > span {
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0px;
+  top: 0;
+  height: 100%;
+  border-radius: 6px;
+}
+.target .orange .details .progress > span {
+  background-color: var(--orange-color);
+}
+.target .green .details .progress > span {
+  background-color: var(--green-color);
+}
+
+.target .target-row .details .progress {
+  background-color: #0077ff69;
+  height: 6px;
+  border-radius: 10px;
+}
+.target .orange .details .progress {
+  background-color: #f59e0b69;
+}
+.target .green .details .progress {
+  background-color: #22c55e69;
+}
+
+.target .target-row .details .progress > span span {
+  position: absolute;
+  left: 165px;
+  top: -30px;
+  border-radius: 6px;
+}
+
+.target .orange .details .progress > span span {
+  left: 213px;
+}
+
+.target .green .details .progress > span span {
+  left: 288px;
+}
+.target .target-row .details .progress > span span::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #0075ff;
+  top: 20px;
+  left: 10px;
+}
+.target .orange .details .progress > span span::after {
+  border-top-color: var(--orange-color);
+}
+.target .green .details .progress > span span::after {
+  border-top-color: var(--green-color);
+}
+
+@media screen and (max-width: 767px) {
+  .target .target-row .details .progress > span span {
+    left: 193px;
+  }
+  .target .green .details .progress > span span {
+    left: 338px;
+  }
+  .target .orange .details .progress > span span {
+    left: 250px;
+  }
+}
+/** End Targets */
+
+/*! Start Tickets */
+.ticket p {
+  margin-top: -10px;
+}
+.ticket .box {
+  text-align: center;
+  padding: 15px 50px;
+  background-color: orange;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+  transition: all 0.3s ease-in-out;
+}
+.ticket .box:hover {
+  background-color: rgb(224, 150, 12);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+.ticket .box i {
+  color: black;
+  transition: all 0.6s ease-in-out;
+}
+
+.ticket .box i:hover {
+  transform: translateY(20px) scale(1.5);
+}
+
+.ticket .box p {
+  color: rgb(32, 3, 3);
+}
+
+.ticket .box2 {
+  text-align: center;
+  padding: 15px 50px;
+  background-color: var(--blue-color);
+  border-radius: 20px;
+  margin-left: 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+  transition: all 0.3s ease-in-out;
+}
+.ticket .box2:hover {
+  background-color: rgb(11, 71, 222);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+.ticket .box2 i {
+  color: black;
+  transition: all .9s ease-in-out;
+}
+.ticket .box2 i:hover {
+  transform: rotate(360deg);
+}
+.ticket .box2 p {
+  color: rgb(32, 3, 3);
+}
+
+.ticket .box3 {
+  text-align: center;
+  padding: 15px 50px;
+  background-color: var(--green-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+  transition: all 0.3s ease-in-out;
+  margin-right: 120px;
+  margin-top: 20px;
+}
+.ticket .box3:hover {
+  background-color: rgb(10, 171, 10);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+.ticket .box3 i {
+  color: black;
+  transition: all 0.6s ease-in-out;
+}
+.ticket .box3 i:hover {
+  transform: rotate(20deg) scale(1.5);
+}
+
+.ticket .box3 p {
+  color: rgb(32, 3, 3);
+}
+
+.ticket .box4 {
+  text-align: center;
+  padding: 15px 50px;
+  background-color: var(--red-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.ticket .box4:hover {
+  background-color: rgb(203, 15, 15);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+.ticket .box4 i {
+  color: black;
+  transition: all 0.6s ease-in-out;
+}
+.ticket .box4 i:hover {
+  transform: skewY(10deg) scale(1.5);
+}
+.ticket .box4 p {
+  color: rgb(32, 3, 3);
+}
+/*! End Tickets */
