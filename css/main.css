@@ -52,7 +52,7 @@ ul {
 }
 
 .page {
-  min-height: 400vh;
+  min-height: 100vh;
   background-color: rgb(255, 255, 255);
 }
 
@@ -398,6 +398,7 @@ ul {
   height: 150px;
   resize: none;
 }
+
 .quick-draft form textarea,
 .quick-draft form input {
   border: 0px solid var(--grey-color);
@@ -558,7 +559,7 @@ ul {
 }
 .ticket .box2 i {
   color: black;
-  transition: all .9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 .ticket .box2 i:hover {
   transform: rotate(360deg);
@@ -618,4 +619,69 @@ ul {
 .ticket .box4 p {
   color: rgb(32, 3, 3);
 }
+@media screen and (max-width: 667px) {
+  .ticket .wrapper .box2 {
+    margin-left: 40px;
+  }
+  .ticket .wrapper .box4 {
+    margin-left: -80px;
+  }
+}
 /*! End Tickets */
+
+/*? Start Latest News */
+.lat-news .info p {
+  margin-top: -12px;
+}
+.lat-news .info {
+  flex-grow: 1;
+}
+.lat-news .time p {
+  text-align: center;
+  font-size: 10px;
+  padding-inline: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.lat-news .time:hover {
+  color: #000;
+  font-weight: 800;
+  background-color: #e7e7e7;
+}
+/*? End Latest News  */
+
+/** Start Latest Tasks */
+.lat-task .task .info p {
+  transition: all 0.3s ease-in-out;
+}
+.lat-task .task .info p:hover {
+  color: var(--green-color);
+}
+
+.lat-task .task .done {
+  opacity: 0.3;
+  text-decoration: line-through;
+  transition: all 0.3s ease-in-out;
+}
+
+.lat-task .task .del {
+  transition: all 0.3s ease-in-out;
+}
+.lat-task .task .del:hover {
+  color: var(--red-color);
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+/** End Latest Tasks */
