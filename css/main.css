@@ -75,7 +75,7 @@ ul {
 }
 
 .sidebar ul li {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .sidebar ul li a span {
   font-size: 16px;
@@ -685,3 +685,376 @@ ul {
   }
 }
 /** End Latest Tasks */
+
+/*! Start Latest Uploads */
+.latestUpload img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.latestUpload img:hover {
+  transform: scale(1.2);
+}
+.latestUpload .info {
+  flex-grow: 1;
+  transition: all 0.3s ease-in-out;
+}
+.latestUpload .size {
+  transition: all 0.3s ease-in-out;
+}
+.latestUpload .size:hover {
+  color: var(--black-color);
+  cursor: pointer;
+}
+/*! End Latest Uploads */
+
+/*? Start Last Project */
+.last-project .circle::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--dark-blue-color);
+  bottom: 2px;
+  left: -12px;
+  margin-left: 5px;
+}
+
+.last-project .circle .done::before,
+.last-project .circle .current::before,
+.last-project .circle .undone::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: -16px;
+  background-color: white;
+  border: #ffffff solid 3px;
+  outline: var(--blue-alt-color) solid 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+.last-project .circle .done::before {
+  background-color: var(--green-color);
+}
+.last-project .circle .current::before {
+  animation: pulse 0.9s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from {
+    background-color: var(--blue-alt-color);
+  }
+  100% {
+    background-color: var(--white-color);
+  }
+}
+
+.last-project img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  opacity: 0.2;
+  rotate: 40deg;
+  animation: takeOff 2.5s ease-in-out alternate infinite;
+}
+@keyframes takeOff {
+  from {
+    transform: translateY(0px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(-150px);
+    opacity: 1;
+  }
+}
+/*? End Last Project */
+
+/*! Start Reminders */
+.reminder .alarm::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -40px;
+  top: 30%;
+  background-color: var(--blue-color);
+}
+.reminder .alarm::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--blue-color);
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reminder .alarm p {
+  margin-bottom: 5px;
+}
+
+.reminder .alarm2::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -40px;
+  top: 30%;
+  background-color: var(--green-color);
+}
+.reminder .alarm2::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--green-color);
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reminder .alarm2 p {
+  margin-bottom: 5px;
+}
+
+.reminder .alarm3::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -40px;
+  top: 30%;
+  background-color: var(--red-color);
+}
+.reminder .alarm3::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--red-color);
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reminder .alarm3 p {
+  margin-bottom: 5px;
+}
+
+.reminder .alarm4::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -40px;
+  top: 30%;
+  background-color: var(--orange-color);
+}
+.reminder .alarm4::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--orange-color);
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reminder .alarm4 p {
+  margin-bottom: 5px;
+}
+/*! End Reminders */
+
+/*? Start Latest Post */
+.post .title {
+  min-height: 120px;
+}
+.post .action .fa-heart {
+  transition: all 0.3s ease-in-out;
+}
+.post .action .fa-heart:hover {
+  color: var(--red-color);
+  cursor: pointer;
+}
+.post .action .fa-comments {
+  transition: all 0.3s ease-in-out;
+}
+.post .action .fa-comments:hover {
+  color: var(--green-color);
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .post .info {
+    display: block;
+    text-align: center;
+  }
+  .post .title {
+    text-align: center;
+  }
+}
+/*? End Latest Post */
+
+/* Start SM Stats */
+.sm-stat .box {
+  margin-bottom: 15px;
+}
+.sm-stat .box .tw-btn {
+  background-color: #1da1f2;
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.sm-stat .box .tw-btn:hover {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+.sm-stat .box .twitter {
+  background-color: #1da1f2;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+.sm-stat .box {
+  background-color: #1da0f23d;
+  border-radius: 9px;
+}
+
+.sm-stat .box2 .fb-btn {
+  background-color: #1877f2;
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.sm-stat .box2 .fb-btn:hover {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+.sm-stat .box2 .facebook {
+  background-color: #1877f2;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+.sm-stat .box2 {
+  background-color: #1876f26d;
+  border-radius: 9px;
+}
+
+.sm-stat .box3 .yt-btn {
+  background-color: #ff0000;
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.sm-stat .box3 .yt-btn:hover {
+  background-color: darkred;
+  color: var(--white-color);
+}
+.sm-stat .box3 .youtube {
+  background-color: #ff0000;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+.sm-stat .box3 {
+  background-color: #ff000071;
+  border-radius: 9px;
+  margin-block: 10px;
+}
+
+.sm-stat .box4 .lin-btn {
+  background-color: #0a66c2;
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.sm-stat .box4 .lin-btn:hover {
+  background-color: darkblue;
+  color: var(--white-color);
+}
+.sm-stat .box4 .linkedin {
+  background-color: #0a66c2;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+.sm-stat .box4 {
+  background-color: #0a66c288;
+  border-radius: 9px;
+  margin-block: 10px;
+}
+/* End SM Stats */
+
+/*! Start Table */
+.project table {
+  max-width: 1000px;
+  border-spacing: 0;
+  text-align: center;
+  margin-left: 80px;
+}
+.project .table{
+  overflow-x: auto;
+}
+.project .table img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+.project .table thead td {
+  background-color: #eee;
+}
+.project .table td {
+  padding: 20px;
+}
+.project tbody td {
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+
+.project .table img:not(:first-child) {
+  margin-left: -20px;
+}
+
+.project .table tbody tr td:last-child {
+  border-right: 1px solid #eee;
+}
+.project .table tr td {
+  transition: all 0.3s ease-in-out;
+}
+.project .table tr:hover td {
+  background-color: #faf7fa;
+  cursor: pointer;
+}
+.project tbody:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 767px){
+  .project table {
+    margin-left: 0;
+  }
+}
+/*! End Table */
