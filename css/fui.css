@@ -221,6 +221,9 @@
 .mt-n50 {
   margin-top: -50px;
 }
+.mb-0 {
+  margin-bottom: 0;
+}
 
 /** end padding margin */
 

@@ -155,8 +155,8 @@ ul {
   content: "\f002";
   font-weight: 900;
   position: absolute;
-  left: 15px;
-  top: 50%;
+  left: 18px;
+  top: 48%;
   transform: translateY(-50%);
   font-size: 14px;
   color: var(--grey-color);
@@ -1013,7 +1013,7 @@ ul {
   text-align: center;
   margin-left: 80px;
 }
-.project .table{
+.project .table {
   overflow-x: auto;
 }
 .project .table img {
@@ -1052,9 +1052,97 @@ ul {
   background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .project table {
     margin-left: 0;
   }
 }
 /*! End Table */
+/*! End Dashboard Page  */
+
+/*? Start Settings Page */
+.setting {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media screen and (max-width: 767px) {
+  .setting {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+/* Satrt Toggle Swtich */
+.toggle {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.toggle-switch {
+  background-color: #ccc;
+  width: 80px;
+  height: 35px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  position: absolute;
+  font-weight: 900;
+  width: 33px;
+  height: 33px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  left: 4px;
+  top: 1px;
+  font-size: 18px;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.toggle:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 43px;
+}
+/* Satrt Toggle Swtich */
+
+/*! Start Site Control */
+.site p {
+  margin-top: -25px;
+  margin-bottom: 50px;
+}
+
+.site h1{
+  margin-left: 2px;
+}
+.site .control {
+  margin-top: -50px;
+}
+
+.site .control label {
+  margin-top: -20px;
+}
+
+.site .textarea {
+  width: 400px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 80px;
+}
+.site .textarea:focus {
+  border: 1px solid var(--blue-alt-color);
+  box-shadow: 0 0 6px var(--blue-alt-color);
+}
+.site .textarea:focus::placeholder {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+/*! End Site Control */
+
+/*? End Settings Page */
